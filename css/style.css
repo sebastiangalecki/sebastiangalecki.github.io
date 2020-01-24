@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    height: 100vh;
+}
+
+.table-container {
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading img {
+    height: 1em;
+    position: relative;
+    top: 4px;
+}
+
+.date {
+    text-align: center;
+    height: 1px;
+    position: relative;
+    top: -24px;
+    font-size: 10px;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    box-sizing: border-box;
+    overflow: hidden !important;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    font-size: 2vh;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (orientation: portrait) {
+    td {
+        width: 100px;
+        height: 80px;
+    }
+}
+
+@media (orientation: landscape) {
+    td {
+        width: 120px;
+        height: 100px;
+    }
+}
+
+#date {
+    color: red;
+}
+
+td.crossed {
+    background: 
+         linear-gradient(to top left,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(50% - 3px),
+             red 50%,
+             rgba(0,0,0,0) calc(50% + 3px),
+             rgba(0,0,0,0) 100%);
+}
