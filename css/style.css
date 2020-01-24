@@ -45,15 +45,15 @@ td {
 
 @media (orientation: portrait) {
     td {
-        width: 120px;
-        height: 100px;
+        width: 8vw;
+        height: 13vh;
     }
 }
 
 @media (orientation: landscape) {
     td {
-        width: 120px;
-        height: 100px;
+        width: 8vw;
+        height: 13vh;
     }
 }
 
