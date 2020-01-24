@@ -37,7 +37,7 @@ td {
     border: 2px solid black;
     text-align: center;
     padding: 10px;
-    font-size: 3vh;
+    font-size: 2vh;
     position: relative;
     user-select: none;
     cursor: pointer;
@@ -45,15 +45,15 @@ td {
 
 @media (orientation: portrait) {
     td {
-        width: 10vw;
-        height: 10vw;
+        width: 100px;
+        height: 80px;
     }
 }
 
 @media (orientation: landscape) {
     td {
-        width: 100px;
-        height: 80px;
+        width: 120px;
+        height: 100px;
     }
 }
 
