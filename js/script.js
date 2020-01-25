@@ -28,7 +28,7 @@ var t = [
 'Nitinol',
 '"Umówmy się"',
 'Luźniejszy temat',
-'PACH!',
+'Jonny Daniels',
 'Grupa Bilderberg',
 'mBank',
 'Trolling na czacie',
@@ -49,7 +49,7 @@ var t = [
 'Klod jest zmęczony',
 'Służby',
 'Cywilizacja Turańska',
-'Zamach na JFK',
+'Zamach na JFK'
 ];
 
 var tw = 7
