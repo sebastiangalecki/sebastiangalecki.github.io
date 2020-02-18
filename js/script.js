@@ -35,7 +35,7 @@ var t = [
 'Przerwa muzyczna',
 'Problemy techniczne',
 'Żydzi',
-'Dzwoni jechowiec',
+'Dzwoni cwel z Żywca',
 'Dzwoni zjeb z UK',
 'Witamina D3',
 'Judeopolonia',
@@ -127,7 +127,6 @@ function randomizeTable() {
     let d = new Date();
     let seed = d.getWeek() + ((d.getMonth() + 1) * 100) + (d.getFullYear() * 10000);
     t = szufla(t, seed);
-
     for (let i = 0; i < tw*tw; i++) {
         $('td[data-cell="' + i + '"]:not([data-cell-center]) span').text(t[i]);
     }
@@ -139,7 +138,6 @@ $(document).ready(function() {
     var date = friday.toLocaleDateString('pl-PL', options)
     var options = { day: 'numeric', month: 'long', year: 'numeric' };
     $('#date').text(date);
-
     initTable();
     randomizeTable();
 });
