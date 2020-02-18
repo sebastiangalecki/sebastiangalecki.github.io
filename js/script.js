@@ -136,7 +136,7 @@ function randomizeTable() {
 $(document).ready(function() {
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
-    var date = friday.toLocaleDateString('pl-PL',options)
+    var date = friday.toLocaleDateString('pl-PL', options)
     var options = { day: 'numeric', month: 'long', year: 'numeric' };
     $('#date').text(date);
 
