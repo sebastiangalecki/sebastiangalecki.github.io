@@ -115,14 +115,13 @@ function initTable() {
 Date.prototype.getWeek = function() {
   var date = new Date(this.getTime());
   date.setHours(0, 0, 0, 0);
-  // Thursday in current week decides the year.
-  date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+  // Friday in current week decides the year.
+  date.setDate(date.getDate() + 4 - (date.getDay() + 6) % 7);
   // January 4 is always in week 1.
   var week1 = new Date(date.getFullYear(), 0, 4);
-  // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+  // Adjust to Friday in week 1 and count number of weeks from date to week1.
   return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
 }
-
 
 function randomizeTable() {
     let d = new Date();
@@ -135,8 +134,11 @@ function randomizeTable() {
 }
 
 $(document).ready(function() {
-    var today = new Date().toJSON().slice(0,10);
-    $('#date').text(today);
+    var friday = new Date()
+    friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
+    var date = friday.toLocaleDateString('pl-PL',options)
+    var options = { day: 'numeric', month: 'long', year: 'numeric' };
+    $('#date').text(date);
 
     initTable();
     randomizeTable();
