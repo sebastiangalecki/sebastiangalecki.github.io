@@ -133,7 +133,7 @@ function randomizeTable() {
 }
 
 function downloadimage(){
-const scale = 4;
+const scale = 2;
 var node = document.getElementById('tablecontainer');
 let obj = {
   height: 790 * scale,
