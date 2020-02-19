@@ -152,12 +152,14 @@ let obj = {
 }
 
 var d = new Date();
-var n = d.getTime();
+var hour = d.getHours();
+var minute = d.getMinutes();
+var second = d.getSeconds();
 
 domtoimage.toPng(node, obj)
     .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = 'bingo(' + n + ').png';
+        link.download = hour + 'h' + minute + 'm' + second + 's.png';
         link.href = dataUrl;
         link.click();
     });
