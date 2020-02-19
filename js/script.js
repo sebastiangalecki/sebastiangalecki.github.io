@@ -133,17 +133,19 @@ function randomizeTable() {
 }
 
 function downloadimage(){
+    
 const scale = 3;
 var node = document.getElementById('tablecontainer');
+    
 let obj = {
-  height: 790 * scale,
-  width: 745 * scale,
-  style: {'margin':'0 auto',
+    height: 780 * scale,
+    width: 745 * scale,
+    style: {'margin':'0 auto',
           'padding': '0',
           'border': '0',
           'outline': '0',
           'position':'absolute',
-          'top': '-20px',
+          'top': '-60px',
           'transform': "scale(" + scale + ")",
           'transformOrigin': "top left"
          }
