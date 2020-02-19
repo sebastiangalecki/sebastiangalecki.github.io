@@ -155,7 +155,7 @@ var n = d.getTime();
 domtoimage.toPng(node, obj)
     .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = 'bingo' + n + '.png';
+        link.download = 'bingo(' + n + ').png';
         link.href = dataUrl;
         link.click();
     });
