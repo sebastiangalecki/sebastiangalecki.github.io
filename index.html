@@ -4,22 +4,22 @@
         <title>Generator Bingo</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     </head>
     <body>
-        <div class="table-container">
-        <div class="heading">
-        <h1> ORGONITY BINGO </span></h1>
+        <div id="tablecontainer" class="table-container">
+            <div class="heading">
+                <h1> ORGONITY BINGO </h1>
+            </div>
+            <div class="date">
+                <p font color="red" span id="date"> </font /span /p>
+            </div>
+            <table></table>
         </div>
-        <div class="date">
-        <p> <font color="red"> <span id="date"> </font> </span>
-        </div>
-        <table></table>
-        </div>
-        <script src="main.js"></script>
+        <button onclick="downloadimage()" class="button">Pobierz bingo!</button>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

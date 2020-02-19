@@ -1,35 +1,47 @@
 body {
     margin: 0;
-    margin-top: -3vh;
     padding: 0;
+    border: 0;
+    outline: 0;
     font-family: "Open Sans";
-    height: 100vh;
+    position: relative;
+    top: -28px;
+    overflow: hidden;
 }
 
 .table-container {
-    width: 100%;
+    max-width: 745px;
+    min-width: 745px;
+    max-height: 800px;
+    min-height: 800px;
+    margin: auto;
+    background-color: #ffffff;
 }
 
 .heading {
     text-align: center;
+    margin: auto;
 }
 
-.heading img {
-    height: 1em;
-    position: relative;
-    top: 4px;
+.button {
+    position: absolute;
+    top: 25px;
+    left: 20px; 
 }
 
 .date {
     text-align: center;
-    height: 1px;
     position: relative;
-    top: -24px;
-    font-size: 10px;
+    top: -20px;
+    font-size: 12px;
+    margin: auto;
 }
+
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    position: relative;
+    top: -20px;
 }
 
 td {
@@ -38,23 +50,27 @@ td {
     border: 2px solid black;
     text-align: center;
     padding: 5px;
-    font-size: 2vh;
+    font-size: 14px;
     position: relative;
     user-select: none;
     cursor: pointer;
+    max-width: 102px;
+    min-width: 102px;
+    max-height: 102px;
+    min-height: 102px;
 }
 
 @media (orientation: portrait) {
     td {
-        width: 8vw;
-        height: 13vh;
+        width: 102px;
+        height: 102px;
     }
 }
 
 @media (orientation: landscape) {
     td {
-        width: 8vw;
-        height: 13vh;
+        width: 102px;
+        height: 102px;
     }
 }
 

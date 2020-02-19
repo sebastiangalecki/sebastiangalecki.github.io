@@ -132,6 +132,35 @@ function randomizeTable() {
     }
 }
 
+function downloadimage(){
+const scale = 4;
+var node = document.getElementById('tablecontainer');
+let obj = {
+  height: 790 * scale,
+  width: 745 * scale,
+  style: {'margin':'0 auto',
+          'padding': '0',
+          'border': '0',
+          'outline': '0',
+          'position':'absolute',
+          'top': '-20px',
+          'transform': "scale(" + scale + ")",
+          'transformOrigin': "top left"
+         }
+}
+
+var d = new Date();
+var n = d.getTime();
+
+domtoimage.toPng(node, obj)
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'bingo' + n + '.png';
+        link.href = dataUrl;
+        link.click();
+    });
+}
+
 $(document).ready(function() {
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
