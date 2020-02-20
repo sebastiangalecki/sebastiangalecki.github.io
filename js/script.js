@@ -152,14 +152,18 @@ let obj = {
 }
 
 var d = new Date();
-var hour = d.getHours();
-var minute = d.getMinutes();
-var second = d.getSeconds();
+    d.setDate(d.getDate() + 4 - (d.getDay() + 6) % 7);
+var hour = d.getHours(),
+    minute = d.getMinutes(),
+    second = d.getSeconds(),
+    day = d.getDate(),
+    month = d.getMonth() + 1,
+    year = d.getFullYear();
 
 domtoimage.toPng(node, obj)
     .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = hour + 'h' + minute + 'm' + second + 's.png';
+        link.download = day + '-' + month + '-' + year +' ' + hour + 'h' + minute + 'm' + second + 's.png';
         link.href = dataUrl;
         link.click();
     });
@@ -168,8 +172,8 @@ domtoimage.toPng(node, obj)
 $(document).ready(function() {
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
-    var date = friday.toLocaleDateString('pl-PL', options)
     var options = { day: 'numeric', month: 'long', year: 'numeric' };
+    var date = friday.toLocaleDateString('pl-PL', options)
     $('#date').text(date);
     initTable();
     randomizeTable();
