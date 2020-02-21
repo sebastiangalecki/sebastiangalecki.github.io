@@ -172,7 +172,7 @@ domtoimage.toPng(node, obj)
 $(document).ready(function() {
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
-    var options = { day: 'numeric', month: 'long', year: 'numeric' };
+    var options = { day: 'numeric', month: 'numeric', year: 'numeric' };
     var date = friday.toLocaleDateString('pl-PL', options)
     $('#date').text(date);
     initTable();
