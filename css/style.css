@@ -5,16 +5,14 @@ body {
     outline: 0;
     font-family: "Open Sans";
     position: relative;
-    top: -2vh;
+    top: -16px;
     overflow: hidden;
 }
 
 .table-container {
-    max-width: 745px;
-    min-width: 745px;
-    max-height: 800px;
-    min-height: 800px;
-    margin: auto;
+    width: 745px;
+    height: 800px;
+    margin: 0 auto;
     background-color: #ffffff;
 }
 

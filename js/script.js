@@ -145,7 +145,7 @@ let obj = {
           'border': '0',
           'outline': '0',
           'position':'absolute',
-          'top': '-60px',
+          'margin-top': '-60px',
           'transform': "scale(" + scale + ")",
           'transformOrigin': "top left"
          }
