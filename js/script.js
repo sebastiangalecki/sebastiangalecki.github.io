@@ -18,6 +18,7 @@ var t = [
 'Klod jest nawciągany',
 'Spucha',
 'UFO',
+'Smalec',
 'Monty Pajton',
 '*BEEEEEEK*',
 '"Naprawie X za tydzień"',
