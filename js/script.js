@@ -70,7 +70,8 @@ function szufla(array, seed) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
+    array.splice(24,0,"0")
+    
     return array;
 }
 
