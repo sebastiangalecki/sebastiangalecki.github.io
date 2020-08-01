@@ -14,7 +14,7 @@ var temporary = [
 'Jechanie po polsce',
 'Szczepionki',
 'Klod pierdoli o trollach',
-'Klod jest nawciągany',
+'Klod jest najebany/ naćpany',
 'Spucha',
 'UFO',
 'Monty Pajton',
@@ -27,14 +27,14 @@ var temporary = [
 'Nitinol',
 '"Umówmy się"',
 'Luźniejszy temat',
-'Jonny Daniels',
+'Nikola Tesla',
 'Grupa Bilderberg',
 'mBank',
 'Trolling na czacie',
 'Przerwa muzyczna',
 'Problemy techniczne',
 'Żydzi',
-'Dzwoni cwel z Żywca',
+'Dzwoni jechowiec',
 'Dzwoni zjeb z UK',
 'Witamina D3',
 'Judeopolonia',
@@ -47,7 +47,7 @@ var temporary = [
 'Bill Hicks',
 'Klod jest zmęczony',
 'Służby',
-'Cywilizacja Turańska',
+'Cywilizacja według Konecznego',
 'Zamach na JFK'
 ];
 
@@ -173,7 +173,7 @@ domtoimage.toPng(node, obj)
 
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
-    Cookies.set('values', JSON.stringify(temp), { expires: 365 });
+    Cookies.set('values', JSON.stringify(temp), { expires: 999 });
 }
 
 function loadToTextbox() {
@@ -186,24 +186,27 @@ function loadToTextbox() {
 function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
-    Cookies.set('values', JSON.stringify(temporary), { expires: 365 })
+    Cookies.set('values', JSON.stringify(temporary), { expires: 999 })
 }
 
 $(document).ready(function() {
     var loaded = Cookies.get('values')
+    
     if (loaded !== undefined) {
         loadToTextbox()
     }
     else {
         loadDefaultToTextbox();
     }
+    
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
+    
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
     var options = { day: 'numeric', month: 'numeric', year: 'numeric' };
     var date = friday.toLocaleDateString('pl-PL', options)
     $('#date').text(date);
+    
     initTable();
     randomizeTable();
-    console.log("version 1.2")
 });

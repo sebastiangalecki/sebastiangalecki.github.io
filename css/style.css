@@ -6,7 +6,6 @@ body {
     font-family: "Open Sans";
     position: relative;
     top: -16px;
-    overflow: hidden;
 }
 
 .table-container {
