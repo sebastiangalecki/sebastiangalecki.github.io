@@ -176,17 +176,13 @@ domtoimage.toPng(node, obj)
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
     Cookies.set('values', JSON.stringify(temp), { expires: 365 });
-    console.log(temp)
 }
 
 function loadToTextbox() {
     var temp = Cookies.get('values');
-    console.log(temp)
     var cookie = JSON.parse(temp);
-    console.log(cookie)
     var textbox = document.getElementById('textbox');
     textbox.value = cookie.join("\n")
-    console.log(textbox)
 }
 
 function loadDefaultToTextbox() {
@@ -196,15 +192,12 @@ function loadDefaultToTextbox() {
 
 $(document).ready(function() {
     var loaded = Cookies.get('values')
-    console.log(loaded)
     if (loaded !== undefined) {
         loadToTextbox()
-        console.log("loaded from cookie")
     }
     else {
         loadDefaultToTextbox()
         Cookies.set('values', JSON.stringify(temporary), { expires: 365 });
-        console.log("loaded from memory")
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
