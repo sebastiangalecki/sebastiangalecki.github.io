@@ -180,7 +180,7 @@ function save() {
 }
 
 function loadToTextbox() {
-    var cookie = Cookies.get(JSON.parse(values));
+    var cookie = JSON.parse(Cookies.get('values'));
     var textbox = document.getElementById('textbox');
     textbox.value = cookie.join("\n")
 }
