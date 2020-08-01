@@ -180,7 +180,6 @@ function save() {
 }
 
 function loadToTextbox() {
-    var cookie = JSON.parse(Cookies.get('values'));
     var textbox = document.getElementById('textbox');
     textbox.value = cookie.join("\n")
 }
@@ -197,7 +196,6 @@ $(document).ready(function() {
     }
     else {
         loadDefaultToTextbox()
-        Cookies.set('values', JSON.stringify(temporary))
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
