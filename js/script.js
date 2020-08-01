@@ -196,14 +196,15 @@ function loadDefaultToTextbox() {
 
 $(document).ready(function() {
     var loaded = Cookies.get('values')
-    if (loaded !== undefined) {
-        loadToTextbox()
-        console.log("loaded from cookie")
-    }
-    else {
+    console.log(loaded)
+    if (loaded === undefined) {
         loadDefaultToTextbox()
         Cookies.set('values', JSON.stringify(temporary), { expires: 365 });
         console.log("loaded from memory")
+    }
+    else {
+        loadToTextbox()
+        console.log("loaded from cookie")
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
