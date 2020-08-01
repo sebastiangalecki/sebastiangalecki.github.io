@@ -1,6 +1,6 @@
 ﻿var tc = 'nadają orgonity (super bonus kurwo xD)';
 
-var t = [
+var temporary = [
 'Globaliści',
 'Dzwoni Stały Słuchacz',
 'Alex Jones',
@@ -52,6 +52,9 @@ var t = [
 'Cywilizacja Turańska',
 'Zamach na JFK'
 ];
+
+var t
+var cookieloaded
 
 var tw = 7
   
@@ -171,7 +174,32 @@ domtoimage.toPng(node, obj)
     });
 }
 
+function save() {
+    var temp = document.getElementById('textbox').value.split('\n');
+    Cookies.set('values', JSON.stringify(temp));
+}
+
+function loadToTextbox() {
+    var cookie = Cookies.get(JSON.parse(values));
+    var textbox = document.getElementById('textbox');
+    textbox.value = cookie.join("\n")
+}
+
+function loadDefaultToTextbox() {
+    var textbox = document.getElementById('textbox');
+    textbox.value = temporary.join("\n");
+}
+
 $(document).ready(function() {
+    var loaded = Cookies.get('values')
+    if (loaded !== undefined) {
+        loadToTextbox()
+    }
+    else {
+        loadDefaultToTextbox()
+        Cookies.set('values', JSON.stringify(temporary))
+    }
+    t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
     var options = { day: 'numeric', month: 'numeric', year: 'numeric' };

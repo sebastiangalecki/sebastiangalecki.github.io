@@ -16,6 +16,13 @@ body {
     background-color: #ffffff;
 }
 
+.textbox {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    resize: none;
+}
+
 .heading {
     text-align: center;
     margin: auto;
@@ -84,5 +91,4 @@ td.crossed {
         red 50%,
         rgba(0,0,0,0) calc(50% + 3px),
         rgba(0,0,0,0) 100%);
-        background-position: top;
 }

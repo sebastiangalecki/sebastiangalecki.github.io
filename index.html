@@ -8,6 +8,7 @@
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     </head>
     <body>
         <div id="tablecontainer" class="table-container">
@@ -21,5 +22,6 @@
         </div>
         <button onclick="downloadimage()" class="button">Pobierz bingo</button>
         <script type="text/javascript" src="js/script.js"></script>
+        <textarea id="textbox" class="textbox" name="textbox" rows="50" cols="40" onchange="save()"> </textarea>
     </body>
 </html>
