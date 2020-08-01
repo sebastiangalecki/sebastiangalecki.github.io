@@ -175,7 +175,7 @@ domtoimage.toPng(node, obj)
 
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
-    Cookies.set('values', JSON.stringify(temp));
+    Cookies.set('values', JSON.stringify(temp), { expires: 9999 });
 }
 
 function loadToTextbox() {
@@ -196,7 +196,7 @@ $(document).ready(function() {
     }
     else {
         loadDefaultToTextbox()
-        Cookies.set('values', JSON.stringify(temporary));
+        Cookies.set('values', JSON.stringify(temporary), { expires: 9999 });
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
@@ -206,5 +206,5 @@ $(document).ready(function() {
     $('#date').text(date);
     initTable();
     randomizeTable();
-    console.log("version 1.0")
+    console.log("version 1.1")
 });
