@@ -40,6 +40,12 @@ body {
     left: 256px; 
 }
 
+.button3 {
+    position: absolute;
+    top: 25px;
+    left: 122px; 
+}
+
 .date {
     text-align: center;
     position: relative;

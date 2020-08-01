@@ -188,6 +188,12 @@ function loadToTextbox() {
 function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
+    Cookies.set('values', JSON.stringify(temporary), { expires: 365 })
+}
+
+function backtodefault() {
+    loadDefaultToTextbox()
+    window.location.reload(true)
 }
 
 $(document).ready(function() {
@@ -196,8 +202,7 @@ $(document).ready(function() {
         loadToTextbox()
     }
     else {
-        loadDefaultToTextbox()
-        Cookies.set('values', JSON.stringify(temporary), { expires: 365 });
+        loadDefaultToTextbox();
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
