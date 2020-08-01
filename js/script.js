@@ -188,6 +188,7 @@ function loadToTextbox() {
 function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
+    Cookies.set('values', JSON.stringify(temporary));
 }
 
 $(document).ready(function() {
