@@ -54,7 +54,6 @@ var temporary = [
 ];
 
 var t
-var cookieloaded
 
 var tw = 7
   
@@ -188,7 +187,6 @@ function loadToTextbox() {
 function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
-    Cookies.set('values', JSON.stringify(temporary));
 }
 
 $(document).ready(function() {
@@ -198,6 +196,7 @@ $(document).ready(function() {
     }
     else {
         loadDefaultToTextbox()
+        Cookies.set('values', JSON.stringify(temporary));
     }
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     var friday = new Date()
