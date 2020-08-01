@@ -174,6 +174,7 @@ domtoimage.toPng(node, obj)
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
     Cookies.set('values', JSON.stringify(temp), { expires: 365 });
+    window.location.reload(true)
 }
 
 function loadToTextbox() {
