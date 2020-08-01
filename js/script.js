@@ -206,4 +206,5 @@ $(document).ready(function() {
     $('#date').text(date);
     initTable();
     randomizeTable();
+    console.log("version 1.0")
 });
