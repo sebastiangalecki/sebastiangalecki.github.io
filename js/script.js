@@ -14,7 +14,7 @@ var temporary = [
 'Jechanie po polsce',
 'Szczepionki',
 'Klod pierdoli o trollach',
-'Klod jest najebany/ naćpany',
+'Klod jest najebany albo naćpany',
 'Spucha',
 'UFO',
 'Monty Pajton',
@@ -129,6 +129,9 @@ function randomizeTable() {
     let d = new Date();
     let seed = d.getWeek() + ((d.getMonth() + 1) * 100) + (d.getFullYear() * 10000);
     t = szufla(t, seed);
+}
+
+function fillTable() {
     for (let i = 0; i < tw*tw; i++) {
         $('td[data-cell="' + i + '"]:not([data-cell-center]) span').text(t[i]);
     }
@@ -209,4 +212,5 @@ $(document).ready(function() {
     
     initTable();
     randomizeTable();
+    fillTable();
 });
