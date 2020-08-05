@@ -206,7 +206,7 @@ $(document).ready(function() {
     
     var friday = new Date()
     friday.setDate(friday.getDate() + 4 - (friday.getDay() + 6) % 7);
-    var options = { day: 'numeric', month: 'numeric', year: 'numeric' };
+    var options = { day: '2-digit', month: '2-digit', year: 'numeric' };
     var date = friday.toLocaleDateString('pl-PL', options)
     $('#date').text(date);
     
