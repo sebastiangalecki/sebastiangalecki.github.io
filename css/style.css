@@ -9,40 +9,17 @@ body {
 }
 
 .table-container {
+    position: relative;
     width: 745px;
     height: 800px;
     margin: 0 auto;
     background-color: #ffffff;
-}
-
-.textbox {
-    position: absolute;
-    top: 55px;
-    left: 20px;
-    resize: none;
+    z-index: 0;
 }
 
 .heading {
     text-align: center;
     margin: auto;
-}
-
-.button {
-    position: absolute;
-    top: 25px;
-    left: 20px; 
-}
-
-.button2 {
-    position: absolute;
-    top: 25px;
-    left: 256px; 
-}
-
-.button3 {
-    position: absolute;
-    top: 25px;
-    left: 122px; 
 }
 
 .date {
@@ -70,24 +47,8 @@ td {
     position: relative;
     user-select: none;
     cursor: pointer;
-    max-width: 102px;
-    min-width: 102px;
-    max-height: 102px;
-    min-height: 102px;
-}
-
-@media (orientation: portrait) {
-    td {
-        width: 102px;
-        height: 102px;
-    }
-}
-
-@media (orientation: landscape) {
-    td {
-        width: 102px;
-        height: 102px;
-    }
+    width: 102px;
+    height: 102px;
 }
 
 #date {
@@ -102,4 +63,34 @@ td.crossed {
         red 50%,
         rgba(0,0,0,0) calc(50% + 3px),
         rgba(0,0,0,0) 100%);
+}
+
+.textbox {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    resize: none;
+    z-index: 1;
+    max-width: 303px;
+}
+
+.button {
+    position: absolute;
+    top: 25px;
+    left: 20px; 
+    z-index: 1;
+}
+
+.button2 {
+    position: absolute;
+    top: 25px;
+    left: 256px; 
+    z-index: 1;
+}
+
+.button3 {
+    position: absolute;
+    top: 25px;
+    left: 122px; 
+    z-index: 1;
 }

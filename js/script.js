@@ -142,18 +142,17 @@ function downloadimage(){
 const scale = 3;
 var node = document.getElementById('tablecontainer');
     
+document.getElementById("tablecontainer").style.margin = ('0 0')
+    
 let obj = {
     height: 780 * scale,
     width: 745 * scale,
-    style: {'margin':'0 auto',
-          'padding': '0',
-          'border': '0',
-          'outline': '0',
-          'position':'absolute',
-          'margin-top': '-60px',
-          'transform': "scale(" + scale + ")",
-          'transformOrigin': "top left"
-         }
+    style: {
+        'position':'absolute',
+        'marginTop': '-60px',
+        'transform': "scale(" + scale + ")",
+        'transformOrigin': "top left",
+     }
 }
 
 var d = new Date();
@@ -171,6 +170,7 @@ domtoimage.toPng(node, obj)
         link.download = day + '-' + month + '-' + year +' ' + hour + 'h' + minute + 'm' + second + 's.png';
         link.href = dataUrl;
         link.click();
+        document.getElementById("tablecontainer").style.margin = ('0 auto')
     });
 }
 
