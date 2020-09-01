@@ -143,6 +143,7 @@ const scale = 3;
 var node = document.getElementById('tablecontainer');
     
 document.getElementById("tablecontainer").style.margin = ('0 0')
+document.getElementById("text").style.display = ('block')
     
 let obj = {
     height: 780 * scale,
@@ -171,6 +172,7 @@ domtoimage.toPng(node, obj)
         link.href = dataUrl;
         link.click();
         document.getElementById("tablecontainer").style.margin = ('0 auto')
+        document.getElementById("text").style.display = ('none')
     });
 }
 

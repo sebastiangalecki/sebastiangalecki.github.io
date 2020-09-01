@@ -94,3 +94,12 @@ td.crossed {
     left: 122px; 
     z-index: 1;
 }
+
+.text {
+    display: none;
+    color: red;
+    position:fixed;
+    top: 144px;
+    right: 125px;
+    transform: rotate(33deg);
+}
