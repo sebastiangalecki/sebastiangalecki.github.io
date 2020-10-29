@@ -177,6 +177,7 @@ domtoimage.toPng(node, obj)
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
     Cookies.set('values', JSON.stringify(temp), { expires: 999 });
+    resetTable();
 }
 
 function loadToTextbox() {
@@ -204,8 +205,8 @@ function resetTable() {
     
     t = document.getElementById('textbox').value.split('\n'); 
 
-randomizeTable()
-fillTable()
+randomizeTable();
+fillTable();
 }
 
 $(document).ready(function() {
