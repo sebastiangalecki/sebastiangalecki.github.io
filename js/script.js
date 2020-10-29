@@ -194,19 +194,12 @@ function loadDefaultToTextbox() {
 }
 
 function resetTable() {
-    var loaded = Cookies.get('values')
-    
-    if (loaded !== undefined) {
-        loadToTextbox()
-    }
-    else {
-        loadDefaultToTextbox();
-    }
-    
+    t = undefined
+    loadToTextbox()
     t = document.getElementById('textbox').value.split('\n'); 
 
-randomizeTable();
-fillTable();
+    randomizeTable();
+    fillTable();
 }
 
 $(document).ready(function() {
