@@ -25,7 +25,7 @@
     <div>
         <button onclick="downloadimage()" class="button">Pobierz bingo</button>
         <button onclick="resetTable()" class="button2">Odśwież</button>
-        <button onclick="loadDefaultToTextbox()" class="button3">Standardowe hasła</button>
+        <button onclick="loadDefaultToTextbox(); resetTable();" class="button3">Standardowe hasła</button>
         <textarea id="textbox" class="textbox" name="textbox" rows="48" cols="40" oninput= "save()"></textarea>
     </div>
 </html>
