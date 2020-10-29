@@ -19,12 +19,12 @@
             <div class="date">
                 <p font color="red" span id="date"> </font /span /p>
             </div>
-            <table></table>
+            <table id="table"></table>
         </div>
     </body>
     <div>
         <button onclick="downloadimage()" class="button">Pobierz bingo</button>
-        <button onclick="window.location.reload(true)" class="button2">Odśwież</button>
+        <button onclick="resetTable()" class="button2">Odśwież</button>
         <button onclick="loadDefaultToTextbox()" class="button3">Standardowe hasła</button>
         <textarea id="textbox" class="textbox" name="textbox" rows="48" cols="40" oninput= "save()"></textarea>
     </div>

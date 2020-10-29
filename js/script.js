@@ -139,10 +139,10 @@ function fillTable() {
 
 function downloadimage(){
     
-const scale = 3;
-var node = document.getElementById('tablecontainer');
+    const scale = 3;
+    var node = document.getElementById('tablecontainer');
     
-document.getElementById("tablecontainer").style.margin = ('0 0')
+    document.getElementById("tablecontainer").style.margin = ('0 0')
     
 let obj = {
     height: 780 * scale,
@@ -190,6 +190,21 @@ function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
     Cookies.set('values', JSON.stringify(temporary), { expires: 999 })
+}
+
+function resetTable(){
+    var loaded = Cookies.get('values')
+    
+    if (loaded !== undefined) {
+        loadToTextbox()
+    }
+    else {
+        loadDefaultToTextbox();
+    }
+    
+    t = document.getElementById('textbox').value.split('\n'); 
+    
+fillTable()
 }
 
 $(document).ready(function() {
