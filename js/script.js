@@ -203,7 +203,8 @@ function resetTable() {
     }
     
     t = document.getElementById('textbox').value.split('\n'); 
-    
+
+randomizeTable()
 fillTable()
 }
 
