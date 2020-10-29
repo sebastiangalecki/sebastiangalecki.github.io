@@ -192,7 +192,7 @@ function loadDefaultToTextbox() {
     Cookies.set('values', JSON.stringify(temporary), { expires: 999 })
 }
 
-function resetTable(){
+function resetTable() {
     var loaded = Cookies.get('values')
     
     if (loaded !== undefined) {
