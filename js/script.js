@@ -1,6 +1,6 @@
 ﻿var tc = 'nadają orgonity (super bonus kurwo xD)';
 
-var temporary = [
+var temporaryOLD = [
 'Globaliści',
 'Dzwoni Stały Słuchacz',
 'Alex Jones',
@@ -49,6 +49,57 @@ var temporary = [
 'Służby',
 'Cywilizacja według Konecznego',
 'Zamach na JFK'
+];
+
+var temporary = [
+'Globaliści',
+'Dzwoni Stały Słuchacz',
+'Alex Jones',
+'Idiokracja',
+'Big Pharma',
+'"Zły Wilk"',
+'Pedofilia',
+'Klodowi plącze się język',
+'Jechanie po polsce',
+'Szczepionki',
+'Klod pierdoli o trollach',
+'Klod jest najebany albo naćpany',
+'Spucha',
+'UFO',
+'Monty Pajton',
+'*BEEEEEEK*',
+'"Naprawie X za tydzień"',
+'Sheeple',
+'Telefon od anona',
+'Free Energy',
+'PACH!',
+'"Umówmy się"',
+'Luźniejszy temat',
+'Nikola Tesla',
+'Grupa Bilderberg',
+'mBank',
+'Trolling na czacie',
+'Przerwa muzyczna',
+'Problemy techniczne',
+'Żydzi',
+'Witamina D3',
+'Judeopolonia',
+'Kryptowaluty',
+'Seryjny samobójca',
+'Rząd Światowy',
+'Falseflag',
+'Klod pierdoli głupoty',
+'Bill Hicks',
+'Klod jest zmęczony',
+'Służby',
+'Zamach na JFK',
+'Magia Chaosu',
+'Łysyblower',
+'Dzwoni Patus',
+'Dzwoni Paweł z Zabrza',
+'Newsy do drugiej',
+'Żółte kamizelki',
+'Srole'
 ];
 
 var t
@@ -176,12 +227,12 @@ domtoimage.toPng(node, obj)
 
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
-    Cookies.set('values', JSON.stringify(temp), { expires: 999 });
+    Cookies.set('valuesnew', JSON.stringify(temp), { expires: 999 });
     resetTable();
 }
 
 function loadToTextbox() {
-    var temp = Cookies.get('values');
+    var temp = Cookies.get('valuesnew');
     var cookie = JSON.parse(temp);
     var textbox = document.getElementById('textbox');
     textbox.value = cookie.join("\n")
@@ -190,7 +241,7 @@ function loadToTextbox() {
 function loadDefaultToTextbox() {
     var textbox = document.getElementById('textbox');
     textbox.value = temporary.join("\n");
-    Cookies.set('values', JSON.stringify(temporary), { expires: 999 })
+    Cookies.set('valuesnew', JSON.stringify(temporary), { expires: 999 })
 }
 
 function resetTable() {
@@ -203,7 +254,7 @@ function resetTable() {
 }
 
 $(document).ready(function() {
-    var loaded = Cookies.get('values')
+    var loaded = Cookies.get('valuesnew')
     
     if (loaded !== undefined) {
         loadToTextbox()
