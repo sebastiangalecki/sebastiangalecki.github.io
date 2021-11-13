@@ -263,7 +263,7 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze))
+    Cookies.set('krzyze', JSON.stringify(krzyze)) //nie ma po co trzymać to ciasteczko w nieskończoność
 }
 
 function restoreBingoState() {
