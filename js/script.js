@@ -164,6 +164,7 @@ function initTable() {
         else {
             $(this).addClass('crossed');
         }
+        saveBingoState();
     });
 }
 
@@ -255,6 +256,31 @@ function resetTable() {
     fillTable();
 }
 
+function saveBingoState() {
+    let krzyze = new Array();
+    for (td of document.querySelectorAll('table#table td')) {
+        if (td.className.includes("crossed")) { 
+            krzyze.push(td.attributes['data-cell'].value)
+        }
+    }
+    Cookies.set('krzyze', JSON.stringify(krzyze), { expires: 999 });
+}
+
+function restoreBingoState() {
+    if (Cookies.get('krzyze')!==undefined) {
+        let krzyze = JSON.parse(Cookies.get('krzyze'));
+        for (k of krzyze) {
+            cell = document.querySelector(`table#table td[data-cell="${k}"]`)
+            if (!cell.className.includes("crossed")) {
+                cell.classList.add("crossed");
+            }
+            console.log(k);
+        }
+    }
+}
+
+
+
 $(document).ready(function() {
     var loaded = Cookies.get('valuesnew')
     
@@ -276,4 +302,5 @@ $(document).ready(function() {
     initTable();
     randomizeTable();
     fillTable();
+    restoreBingoState();
 });
