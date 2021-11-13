@@ -263,7 +263,7 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze), { maximumAge: 60 * 60 * 24 })
+    Cookies.set('krzyze', JSON.stringify(krzyze), { expires: 2 })
 }
 
 function restoreBingoState() {
