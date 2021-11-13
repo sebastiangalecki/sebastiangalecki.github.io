@@ -264,7 +264,7 @@ function saveBingoState() {
         }
     }
     var sunday = new Date();
-    sunday.getDate() + 1
+    sunday.setDate(sunday.getDate() + 1);
     Cookies.set('krzyze', JSON.stringify(krzyze), { expires: sunday })
     console.log(sunday);
 }
