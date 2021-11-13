@@ -1,5 +1,6 @@
 ﻿var tc = 'nadają orgonity (super bonus kurwo xD)';
 
+/*
 var temporaryOLD = [
 'Globaliści',
 'Dzwoni Stały Słuchacz',
@@ -50,6 +51,7 @@ var temporaryOLD = [
 'Cywilizacja według Konecznego',
 'Zamach na JFK'
 ];
+*/
 
 var temporary = [
 'Globaliści',
