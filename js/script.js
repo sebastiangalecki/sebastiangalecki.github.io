@@ -263,7 +263,7 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze), { expires: 999 });
+    Cookies.set('krzyze', JSON.stringify(krzyze) + Date.prototype.getWeek, { expires: 999 });
 }
 
 function restoreBingoState() {
@@ -302,5 +302,9 @@ $(document).ready(function() {
     initTable();
     randomizeTable();
     fillTable();
-    restoreBingoState();
+    var loadedBingoState = Cookies.get('krzyze')
+    
+    if (loadedBingoState.includes(Date.prototype.getWeek)) {
+        restoreBingoState();
+    }
 });
