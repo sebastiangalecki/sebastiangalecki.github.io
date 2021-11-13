@@ -263,7 +263,7 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze), { expires: 3 });
+    Cookies.set('krzyze', JSON.stringify(krzyze), { expirationDate: 60 * 60 * 2 });
 }
 
 function restoreBingoState() {
