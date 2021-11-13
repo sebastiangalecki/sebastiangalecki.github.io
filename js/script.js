@@ -107,6 +107,9 @@ var temporary = [
 var t
 
 var tw = 7
+
+var currentdate = new Date()
+currentdate.setDate(currentdate.getDate() + 4 - (currentdate.getDay() + 6) % 7);
   
 function szufla(array, seed) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -263,12 +266,12 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze) + Date.prototype.getWeek, { expires: 999 });
+    Cookies.set('krzyze', JSON.stringify(krzyze) + currentdate, { expires: 999 });
 }
 
 function restoreBingoState() {
     if (Cookies.get('krzyze')!==undefined) {
-        let krzyze = JSON.parse(Cookies.get('krzyze'));
+        let krzyze = JSON.parse(Cookies.get('krzyze') - currentdate);
         for (k of krzyze) {
             cell = document.querySelector(`table#table td[data-cell="${k}"]`)
             if (!cell.className.includes("crossed")) {
@@ -304,7 +307,7 @@ $(document).ready(function() {
     fillTable();
     var loadedBingoState = Cookies.get('krzyze')
     
-    if (loadedBingoState.includes(Date.prototype.getWeek)) {
+    if (loadedBingoState.includes(currentdate)) {
         restoreBingoState();
     }
 });
