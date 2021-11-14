@@ -4,8 +4,10 @@ body {
     border: 0;
     outline: 0;
     font-family: "Open Sans";
+    color: #d0d0d0;
     position: relative;
     top: -16px;
+    background-color: #252525;
 }
 
 .table-container {
@@ -34,13 +36,12 @@ table {
     border-collapse: collapse;
     position: relative;
     top: -20px;
-    z-index: 2;
 }
 
 td {
     box-sizing: border-box;
     overflow: hidden !important;
-    border: 2px solid black;
+    border: 2px solid #555555;
     text-align: center;
     padding: 5px;
     font-size: 14px;
@@ -49,7 +50,7 @@ td {
     cursor: pointer;
     width: 102px;
     height: 102px;
-    background-color: #ffffff
+    background-color: #252525;
 }
 
 #date {
@@ -80,6 +81,8 @@ td.crossed {
     z-index: 1;
     max-width: 303px;
     max-height: 726px;
+    background-color: #353535;
+    color: #f0f0f0;
 }
 
 .button {
@@ -87,6 +90,8 @@ td.crossed {
     top: 25px;
     left: 20px; 
     z-index: 1;
+    background-color: #353535;
+    color: #f0f0f0;
 }
 
 .button2 {
@@ -94,6 +99,8 @@ td.crossed {
     top: 25px;
     left: 256px; 
     z-index: 1;
+    background-color: #353535;
+    color: #f0f0f0;
 }
 
 .button3 {
@@ -101,6 +108,8 @@ td.crossed {
     top: 25px;
     left: 122px; 
     z-index: 1;
+    background-color: #353535;
+    color: #f0f0f0;
 }
 
 .style {
@@ -108,4 +117,6 @@ td.crossed {
     z-index: 2;
     top: 790px;
     left: 20px;
+    background-color: #353535;
+    color: #f0f0f0;
 }

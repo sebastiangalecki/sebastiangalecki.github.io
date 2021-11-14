@@ -281,7 +281,12 @@ function restoreBingoState() {
     }
 }
 
-
+function setStyleSheet(url) {
+    if (url == undefined) url = "css/style.css";
+    var stylesheet = document.getElementById("stylesheet");
+    stylesheet.setAttribute('href', url);
+    Cookies.set("styl", url, { expires: 999 })
+}
 
 $(document).ready(function() {
     var loaded = Cookies.get('valuesnew')
@@ -305,4 +310,7 @@ $(document).ready(function() {
     randomizeTable();
     fillTable();
     restoreBingoState();
+    
+    var style = Cookies.get("styl")
+    setStyleSheet(style);
 });

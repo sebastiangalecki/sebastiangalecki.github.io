@@ -5,13 +5,23 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet" crossorigin="anonymous">
-        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <link type="text/css" id= "stylesheet" rel="stylesheet" href="css/style.css"/>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="js/script.js"></script>
+        <div id="contextcontainer" class="context-container">
+            <button onclick="downloadimage()" class="button">Pobierz bingo</button>
+            <button onclick="resetTable()" class="button2">Odśwież</button>
+            <button onclick="loadDefaultToTextbox(); resetTable();" class="button3">Standardowe hasła</button>
+            <textarea id="textbox" class="textbox" name="textbox" rows="48" cols="40" oninput= "save()"></textarea>     
+            <select name="style" id="style" class="style" onchange="setStyleSheet(this.value)">
+                <option value="css/style.css">Classic</option>
+                <option value="css/dark.css">Classic Dark</option>
+            </select>
+        </div>
         <div id="tablecontainer" class="table-container">
             <div class="heading">
                 <h1> ORGONITY BINGO </h1>
@@ -22,10 +32,4 @@
             <table id="table"></table>
         </div>
     </body>
-    <div>
-        <button onclick="downloadimage()" class="button">Pobierz bingo</button>
-        <button onclick="resetTable()" class="button2">Odśwież</button>
-        <button onclick="loadDefaultToTextbox(); resetTable();" class="button3">Standardowe hasła</button>
-        <textarea id="textbox" class="textbox" name="textbox" rows="48" cols="40" oninput= "save()"></textarea>
-    </div>
 </html>
