@@ -13,7 +13,8 @@ body {
     width: 745px;
     height: 800px;
     margin: 0 auto;
-    z-index: 2;
+    z-index: 0;
+    background-color: #ffffff
 }
 
 .heading {
@@ -49,7 +50,6 @@ td {
     cursor: pointer;
     width: 102px;
     height: 102px;
-    background-color: #ffffff
 }
 
 #date {
