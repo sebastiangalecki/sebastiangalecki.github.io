@@ -263,7 +263,9 @@ function saveBingoState() {
             krzyze.push(td.attributes['data-cell'].value)
         }
     }
-    Cookies.set('krzyze', JSON.stringify(krzyze)) //nie ma po co trzymać to ciasteczko w nieskończoność
+    var sunday = new Date()
+    sunday.setDate(sunday.getDate() + 6 - (sunday.getDay() + 6) % 7);
+    Cookies.set('krzyze', JSON.stringify(krzyze), { expires: sunday }) //nie ma po co trzymać to ciasteczko w nieskończoność
 }
 
 function restoreBingoState() {
