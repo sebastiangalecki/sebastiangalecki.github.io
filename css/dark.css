@@ -14,9 +14,14 @@ body {
     position: relative;
     width: 745px;
     height: 800px;
-    margin: 0 auto;
     z-index: 0;
     background-color: #252525;
+}
+
+.table-container-wrap {
+    width: 745px;
+    height: 800px;
+    margin: 0 auto;
 }
 
 .heading {

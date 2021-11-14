@@ -196,14 +196,12 @@ function downloadimage(){
     const scale = 3;
     var node = document.getElementById('tablecontainer');
     
-    document.getElementById("tablecontainer").style.margin = ('0 0')
-    
 let obj = {
     height: 780 * scale,
     width: 745 * scale,
     style: {
         'position':'absolute',
-        'marginTop': '-60px',
+        'margin': '-60px auto',
         'transform': "scale(" + scale + ")",
         'transformOrigin': "top left",
      }
@@ -224,10 +222,8 @@ domtoimage.toPng(node, obj)
         link.download = day + '-' + month + '-' + year +' ' + hour + 'h' + minute + 'm' + second + 's.png';
         link.href = dataUrl;
         link.click();
-        document.getElementById("tablecontainer").style.margin = ('0 auto')
     });
 }
-
 function save() {
     var temp = document.getElementById('textbox').value.split('\n');
     Cookies.set('valuesnew', JSON.stringify(temp), { expires: 999 });
@@ -297,6 +293,9 @@ $(document).ready(function() {
     else {
         loadDefaultToTextbox();
     }
+    
+    var style = Cookies.get("styl")
+    setStyleSheet(style)
     
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     
