@@ -17,7 +17,8 @@
             <button onclick="resetTable()" class="button2">Odśwież</button>
             <button onclick="loadDefaultToTextbox(); resetTable();" class="button3">Standardowe hasła</button>
             <textarea id="textbox" class="textbox" name="textbox" rows="48" cols="40" oninput= "save()"></textarea>     
-            <select name="style" id="style" class="style" onchange="setStyleSheet(this.value)" value="Cookies.get(styl)">
+            <select name="style" id="style" class="style" onchange="setStyleSheet(this.value)">
+                <option hidden value="undefined" id="defaultoption">Style</option>
                 <option value="css/style.css">Classic</option>
                 <option value="css/dark.css">Classic Dark</option>
             </select>
