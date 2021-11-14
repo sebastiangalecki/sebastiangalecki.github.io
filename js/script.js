@@ -298,6 +298,9 @@ $(document).ready(function() {
         loadDefaultToTextbox();
     }
     
+    var style = Cookies.get("styl")
+    setStyleSheet(style);
+    
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     
     var friday = new Date()
@@ -310,7 +313,4 @@ $(document).ready(function() {
     randomizeTable();
     fillTable();
     restoreBingoState();
-    
-    var style = Cookies.get("styl")
-    setStyleSheet(style);
 });
