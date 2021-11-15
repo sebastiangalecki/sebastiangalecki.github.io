@@ -191,7 +191,7 @@ function fillTable() {
 
 function downloadimage(){
     
-    const scale = 1;
+    const scale = 3;
     var node = document.getElementById('tablecontainer');
     
 let obj = {

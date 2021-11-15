@@ -71,6 +71,10 @@ td.crossed {
         rgba(0,0,0,0) 100%);
 }
 
+.backgroundimage {
+    background-color: #ffffff
+}
+
 .context-container {
     position: absolute;
     width: 303px;
