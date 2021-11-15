@@ -280,13 +280,12 @@ function restoreBingoState() {
 
 function setStyleSheet(url) {
     if (url == undefined) url = "css/style.css";
-    drawbonus = true
+    var drawbonus = true
     if (url.includes("css/DHL.css")) drawbonus = false
     var stylesheet = document.getElementById("stylesheet");
     stylesheet.setAttribute('href', url);
     Cookies.set("styl", url, { expires: 999 })
     bonustile(drawbonus);
-    console.log(drawbonus)
 }
 
 function bonustile(drawbonus){
