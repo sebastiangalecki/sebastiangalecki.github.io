@@ -1,6 +1,4 @@
-﻿var tc = 'nadają orgonity (super bonus kurwo xD)';
-
-/*
+﻿/*
 var temporaryOLD = [
 'Globaliści',
 'Dzwoni Stały Słuchacz',
@@ -144,7 +142,7 @@ function initTable() {
         for (let j = 0; j < tw; j++) {
 
             if (j == Math.floor(tw / 2) && i == Math.floor(tw / 2)) {
-                ta += '<td data-cell="' + c + '" data-cell-center class="crossed"><span>' + tc + '</span></td>';
+                ta += '<td data-cell="' + c + '" data-cell-center class="crossed"><span></span></td>';
             }
             else {
                 ta += '<td data-cell="' + c + '"><span></span></td>';
@@ -193,7 +191,7 @@ function fillTable() {
 
 function downloadimage(){
     
-    const scale = 3;
+    const scale = 1;
     var node = document.getElementById('tablecontainer');
     
 let obj = {
@@ -201,7 +199,7 @@ let obj = {
     width: 745 * scale,
     style: {
         'position':'absolute',
-        'margin': '-60px auto',
+        'margin': '-20px auto',
         'transform': "scale(" + scale + ")",
         'transformOrigin': "top left",
      }
@@ -215,7 +213,8 @@ var hour = d.getHours(),
     day = d.getDate(),
     month = d.getMonth() + 1,
     year = d.getFullYear();
-
+    
+this.shot_loading = true;
 domtoimage.toPng(node, obj)
     .then(function (dataUrl) {
         var link = document.createElement('a');
@@ -247,7 +246,7 @@ function resetTable() {
     t = undefined
     loadToTextbox()
     t = document.getElementById('textbox').value.split('\n'); 
-
+    
     randomizeTable();
     fillTable();
 }
@@ -261,6 +260,8 @@ function saveBingoState() {
     }
     var sunday = new Date()
     sunday.setDate(sunday.getDate() + 6 - (sunday.getDay() + 6) % 7);
+    sunday.setHours(23,59,59)
+    console.log(sunday)
     Cookies.set('krzyze', JSON.stringify(krzyze), { expires: sunday }) //nie ma po co trzymać to ciasteczko w nieskończoność
 }
 
@@ -279,9 +280,18 @@ function restoreBingoState() {
 
 function setStyleSheet(url) {
     if (url == undefined) url = "css/style.css";
+    drawbonus = true
+    if (url.includes("css/DHL.css")) drawbonus = false
     var stylesheet = document.getElementById("stylesheet");
     stylesheet.setAttribute('href', url);
     Cookies.set("styl", url, { expires: 999 })
+    bonustile(drawbonus);
+}
+
+function bonustile(drawbonus){
+    var tc = 'nadają orgonity (super bonus kurwo xD)';
+    if (drawbonus == false) tc = ""
+    $('td[data-cell="' + Math.round(tw*tw/2-1) + '"] span').text(tc);
 }
 
 $(document).ready(function() {
@@ -308,5 +318,6 @@ $(document).ready(function() {
     initTable();
     randomizeTable();
     fillTable();
+    
     restoreBingoState();
 });
