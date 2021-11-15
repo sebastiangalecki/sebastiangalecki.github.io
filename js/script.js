@@ -280,7 +280,7 @@ function restoreBingoState() {
 function setStyleSheet(url) {
     if (url == undefined) url = "css/style.css";
     var drawbonus = true
-    if (url.includes("css/DHL.css")) drawbonus = false
+    if (url.includes("DHL")) drawbonus = false
     var stylesheet = document.getElementById("stylesheet");
     stylesheet.setAttribute('href', url);
     Cookies.set("styl", url, { expires: 999 })
@@ -303,9 +303,6 @@ $(document).ready(function() {
         loadDefaultToTextbox();
     }
     
-    var style = Cookies.get("styl")
-    setStyleSheet(style)
-    
     t = document.getElementById('textbox').value.split('\n');   //load textbox into array
     
     var friday = new Date()
@@ -317,6 +314,9 @@ $(document).ready(function() {
     initTable();
     randomizeTable();
     fillTable();
+    
+    var style = Cookies.get("styl")
+    setStyleSheet(style)
     
     restoreBingoState();
 });
