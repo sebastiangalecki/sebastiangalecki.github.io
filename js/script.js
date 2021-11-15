@@ -286,6 +286,7 @@ function setStyleSheet(url) {
     stylesheet.setAttribute('href', url);
     Cookies.set("styl", url, { expires: 999 })
     bonustile(drawbonus);
+    console.log(drawbonus)
 }
 
 function bonustile(drawbonus){
