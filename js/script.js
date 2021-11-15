@@ -199,7 +199,7 @@ let obj = {
     width: 745 * scale,
     style: {
         'position':'absolute',
-        'margin': '-20px auto',
+        'margin': '-60px auto',
         'transform': "scale(" + scale + ")",
         'transformOrigin': "top left",
      }

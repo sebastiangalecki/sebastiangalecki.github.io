@@ -11,14 +11,14 @@ body {
 .table-container {
     position: relative;
     width: 745px;
-    height: 800px;
+    height: 860px;
     z-index: 0;
     background-color: #ffffff
 }
 
 .table-container-wrap {
     width: 745px;
-    height: 800px;
+    height: 860px;
     margin: 0 auto;
 }
 
@@ -69,10 +69,6 @@ td.crossed {
         red 50%,
         rgba(0,0,0,0) calc(50% + 3px),
         rgba(0,0,0,0) 100%);
-}
-
-.backgroundimage {
-    background-color: #ffffff
 }
 
 .context-container {
