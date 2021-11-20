@@ -12,7 +12,10 @@
     </head>
     <body>
         <script type="text/javascript" src="js/script.js"></script>
-        <div id="contextcontainer" class="context-container">
+        <div class="button-hide">
+            <button onclick="showmenu()",class="buttonhide">X</button>
+        </div>
+        <div id="contextcontainer" class="context-container show">
             <button onclick="downloadimage()" class="button">Pobierz bingo</button>
             <button onclick="resetTable()" class="button2">Odśwież</button>
             <button onclick="loadDefaultToTextbox(); resetTable();" class="button3">Standardowe hasła</button>

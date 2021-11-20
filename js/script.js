@@ -278,7 +278,7 @@ function restoreBingoState() {
 }
 
 function setStyleSheet(url) {
-    if (url == undefined) url = "css/style.css";
+    if (url == undefined) url = "css/DHL.css";
     var drawbonus = true
     if (url.includes("DHL")) drawbonus = false
     var stylesheet = document.getElementById("stylesheet");
@@ -287,10 +287,15 @@ function setStyleSheet(url) {
     bonustile(drawbonus);
 }
 
-function bonustile(drawbonus){
+function bonustile(drawbonus) {
     var tc = 'nadają orgonity (super bonus kurwo xD)';
     if (drawbonus == false) tc = ""
     $('td[data-cell="' + Math.round(tw*tw/2-1) + '"] span').text(tc);
+}
+
+function showmenu() {
+    var hiddenmenu = document.querySelector('.context-container')
+    hiddenmenu.classList.toggle('show');
 }
 
 $(document).ready(function() {

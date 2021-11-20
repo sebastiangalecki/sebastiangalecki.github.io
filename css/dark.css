@@ -76,6 +76,20 @@ td.crossed {
     position: absolute;
     width: 303px;
     height: 800px;
+    left: -350px;
+    top: 30px;
+    transition: left 0.35s ease-out;
+}
+
+.show {
+    left: 0px;
+}
+
+.button-hide {
+    position: relative;
+    top: 23px;
+    left: 20px; 
+    z-index: 3;
 }
 
 .textbox {
